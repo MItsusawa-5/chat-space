@@ -1,0 +1,40 @@
+.chat-main
+  .group-info
+    .group-name
+      test
+      .member-name
+        Member:masa
+    .edit
+      = link_to "#", class: "edit-btn" do
+        Edit
+  .message-list
+    .message
+      .message-name
+        masa
+        .message-date
+          199x/7/7/77:77
+      .comment
+        頑張るぞい！
+    .message
+      .message-name
+        masa
+        .message-date
+          199x/7/7/77:77
+      .comment
+        頑張るぞい！
+    .message
+      .message-name
+        masa
+        .message-date
+          199x/7/7/77:77
+      .comment
+        頑張るぞい！
+  .message-form
+    .footer
+      %form
+        .text-box
+          %input.text{type: "text",placeholder:"type a message"}
+          %label{type: "hidden",class: "image",for: "text-image"}
+            = icon('fas', 'image')
+            %input{type: "file",class:"image-file",id: "text-image"}
+        %input.send{type:"submit",value:"Send"}
