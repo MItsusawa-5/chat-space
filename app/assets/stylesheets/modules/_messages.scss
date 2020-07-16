@@ -30,24 +30,21 @@
        &__icons{
         width: 60px;
         text-align: right;
-      
          
         }
     }
   }
 }
-.contents_btn_edt{
-  color: #ffffff;
-  list-style: none;
-  margin: 0 0 0 5px;
+.btns{
   text-decoration: none;
+}
+.contents_btn_cog{
+  color: #ffffff;
+  margin: 0 0 0 5px;
 
 }
 .contents__btn{
   color: #ffffff;
-  list-style: none;
-  margin: 0 0 0 5px;
-  text-decoration: none;
 }
 
 
@@ -58,7 +55,6 @@
   padding: 0 20px;
   &__group-form{
     color: #ffffff;
-    text-align: left;
     padding: 20px 0 40px 0;
     &__side-group-name{
       font-size: 15px;
@@ -72,9 +68,9 @@
   }
 }
 
-
-
-
+.group-form-btn{
+  text-decoration: none;
+}
 
 
 .chat-main{
