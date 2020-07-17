@@ -53,19 +53,30 @@
   height: calc(100vh - 100px) ;
   background-color: #2f3e51;
   padding: 0 20px;
+  overflow: scroll;
   &__group-form{
-    color: #ffffff;
     padding: 20px 0 40px 0;
-    &__side-group-name{
+    a{
+      color: white;
+      text-decoration: none;
+    
+      &__side-group-name{
       font-size: 15px;
       width: 260px;
       }
-    &__new-message{
+      &__new-message{
       font-size: 11px;
       width: 260px;
       margin-top: 5px;
+      }
     }
   }
+}
+
+
+.group-btn{
+  text-decoration: none;
+  color: white;
 }
 
 .group-form-btn{
@@ -112,6 +123,7 @@
     height: calc(100vh - 190px);
     background-color: #fafafa;
     padding-left: 40px;
+    overflow: scroll;
   }
 .message{
   padding: 35px 0px 46px 0;
