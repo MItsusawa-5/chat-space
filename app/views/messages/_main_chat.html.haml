@@ -1,40 +1,24 @@
 .chat-main
   .group-info
     .group-name
-      test
-      .member-name
-        Member:masa
+      = @group.name
+      .member-name 
+        Member:
+        - @group.users.each do |f|
+          = f.name
     .edit
-      = link_to "#", class: "edit-btn" do
+      = link_to edit_group_path(@group), class: "edit-btn" do
         Edit
+  
   .message-list
-    .message
-      .message__name
-        masa
-        .message__name__date
-          199x/7/7/77:77
-      .message__comment
-        頑張るぞい！
-    .message
-      .message__name
-        masa
-        .message__name__date
-          199x/7/7/77:77
-      .message__comment
-        頑張るぞい！
-    .message
-      .message__name
-        masa
-        .message__name__date
-          199x/7/7/77:77
-      .message__comment
-        頑張るぞい！
+    = render @messages
+  
   .message-form
     .footer
-      %form.form
+      = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
         .text-box
-          %input.text{type: "text",placeholder:"type a message"}
-          %label{type: "hidden",class: "image",for: "text-image"}
-            = icon('fas', 'image')
-            %input{type: "file",class:"image-file",id: "text-image"}
-        %input.send{type:"submit",value:"Send"}
+          = f.text_field :content, class: "text",placeholder: 'type a message'
+          = f.label :image, class: "image" do
+            = icon('fas', 'image', class: "image__icon")
+            = f.file_field :image, class: "image-file"
+        = f.submit "Send", class: "send"
