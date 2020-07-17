@@ -17,7 +17,7 @@
     .footer
       = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
         .text-box
-          = f.text_field :content, class: "text",placeholder: 'type a message'
+          = f.text_field :content, class: "text", placeholder: 'type a message'
           = f.label :image, class: "image" do
             = icon('fas', 'image', class: "image__icon")
             = f.file_field :image, class: "image-file"
